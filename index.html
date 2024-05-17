@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Recomendaciones</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <!-- Insertar SVG del logo aquí -->
+                <img src="logo.svg" alt="Logo del blog">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="submit-recommendation">
+            <h2>Déjanos saber tu recomendación para la próxima publicación</h2>
+            <form id="recommendation-form">
+                <label for="title">Título:</label>
+                <input type="text" id="title" name="title" required>
+                
+                <label for="author">Autor:</label>
+                <input type="text" id="author" name="author" required>
+                
+                <label for="format">Tipo de formato:</label>
+                <select id="format" name="format" required>
+                    <option value="podcast">Podcast</option>
+                    <option value="video">Vídeo</option>
+                </select>
+                
+                <label for="url">URL:</label>
+                <input type="url" id="url" name="url" required>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="weekly-recommendations">
+            <h2>Recomendaciones semanales</h2>
+            <div class="recommendation">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/14f7pBGJac230U1mPhOfX2?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="recommendation">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dq8XvqgFbPM?si=vkzAZDnwG7FaC150" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="recommendation">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/3rTNSbVoODbNYQkOQy9MZZ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="recommendation">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3zma4cT1tb0?si=X1zyyo5er53foqSS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">
+                <!-- Insertar SVG del logo de Facebook aquí -->
+                <img src="facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <!-- Insertar SVG del logo de Instagram aquí -->
+                <img src="instagram.svg" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

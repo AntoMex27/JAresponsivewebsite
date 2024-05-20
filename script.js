@@ -41,3 +41,4 @@ function deleteRecommendation(button) {
     button.parentElement.remove();
 }
 
+

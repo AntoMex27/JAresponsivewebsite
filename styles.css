@@ -1,33 +1,37 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, #E54694, #BD2373);
-    color: #FFF;
+    background: linear-gradient(135deg, #E54694, #BD2373);
+    color: #FFFFFF;
     margin: 0;
     padding: 0;
 }
 
 header {
     background-color: #FFFFFF;
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
 }
 
-#logo img {
-    width: 95px;
-    height: auto;
+header img {
+    height: 50px;
 }
 
-nav ul {
-    list-style: none;
+header nav ul {
+    list-style-type: none;
     display: flex;
-    gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
-nav ul li a {
-    color: #BD2373;
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
     text-decoration: none;
+    color: #BD2373;
     font-weight: bold;
 }
 
@@ -35,63 +39,71 @@ main {
     padding: 20px;
 }
 
-.recommendation-form, .weekly-recommendations {
-    background: rgba(255, 255, 255, 0.9);
+#recommendation-form {
+    background: #FFFFFF;
+    color: #BD2373;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
 }
 
-form label, form input, form select, form button {
-    display: block;
-    margin-bottom: 10px;
-    width: 100%;
+#recommendation-form h2 {
+    margin-top: 0;
 }
 
-form button {
-    background-color: #BD2373;
-    color: #FFF;
-    border: none;
+#recommendation-form label, #recommendation-form input, #recommendation-form select, #recommendation-form button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#recommendation-form input, #recommendation-form select, #recommendation-form button {
     padding: 10px;
-    cursor: pointer;
+    width: 100%;
+    border: 1px solid #BD2373;
     border-radius: 5px;
 }
 
-form button:hover {
-    background-color: #E54694;
+#recommendation-form button {
+    background-color: #BD2373;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
 }
 
-.recommendation-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+#weekly-recommendations h2 {
+    margin-top: 0;
 }
 
-.recommendation-container iframe {
-    width: 100%;
-    transition: transform 0.3s;
+.recommendation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.recommendation-container iframe:hover {
+.recommendation iframe {
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recommendation iframe:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 footer {
+    background-color: #FFFFFF;
+    padding: 10px;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    background-color: #FFFFFF;
+}
+
+footer a {
+    margin: 0 10px;
 }
 
 footer img {
-    width: 40px;
-    height: 40px;
+    height: 30px;
 }
 
-@media (max-width: 768px) {
-    .recommendation-container {
-        grid-template-columns: 1fr;
-    }
-}
 

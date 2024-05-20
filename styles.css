@@ -1,34 +1,28 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #E54694, #BD2373);
-    color: #FFFFFF;
+    background: linear-gradient(45deg, #E54694, #BD2373);
+    color: #FFF;
     margin: 0;
     padding: 0;
 }
 
 header {
+    background-color: #FFFFFF;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FFFFFF;
-    padding: 10px 20px;
-}
-
-header .logo img {
-    height: 95px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    margin: 0;
-    padding: 0;
 }
 
 nav ul li a {
-    text-decoration: none;
     color: #BD2373;
+    text-decoration: none;
     font-weight: bold;
 }
 
@@ -36,95 +30,62 @@ main {
     padding: 20px;
 }
 
-#submit-recommendation {
-    background-color: #FFFFFF;
+.recommendation-form, .weekly-recommendations {
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
-    color: #BD2373;
     margin-bottom: 20px;
 }
 
-#submit-recommendation h2 {
-    margin-top: 0;
-}
-
-#submit-recommendation label {
+form label, form input, form select, form button {
     display: block;
-    margin-top: 10px;
-}
-
-#submit-recommendation input, #submit-recommendation select, #submit-recommendation button {
+    margin-bottom: 10px;
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #BD2373;
 }
 
-#submit-recommendation button {
+form button {
     background-color: #BD2373;
-    color: #FFFFFF;
+    color: #FFF;
     border: none;
+    padding: 10px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-#submit-recommendation button:hover {
+form button:hover {
     background-color: #E54694;
 }
 
-#weekly-recommendations {
-    display: flex;
-    flex-wrap: wrap;
+.recommendation-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
-    justify-content: center;
 }
 
-.recommendation {
-    flex: 1 1 45%;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    padding: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-}
-
-.recommendation:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.recommendation iframe {
+.recommendation-container iframe {
     width: 100%;
-    height: 200px;
+    transition: transform 0.3s;
 }
 
-.recommendation .actions {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-.recommendation .actions button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 5px;
-    color: #BD2373;
-}
-
-.recommendation .actions button:hover {
-    color: #E54694;
+.recommendation-container iframe:hover {
+    transform: scale(1.05);
 }
 
 footer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 20px;
+    padding: 20px;
     background-color: #FFFFFF;
-    padding: 10px 20px;
 }
 
-footer .social-links a {
-    margin: 0 10px;
-    color: #BD2373;
+footer img {
+    width: 40px;
+    height: 40px;
+}
+
+@media (max-width: 768px) {
+    .recommendation-container {
+        grid-template-columns: 1fr;
+    }
 }
